@@ -126,9 +126,6 @@ with mp_hands.Hands(
 
                     # Calculate the distance between thumb and index finger
                     distance = math.hypot(right_idx_x - right_thumb_x, right_idx_y - right_thumb_y)
-
-                    # Draw a line between the tips of thumb and index finger
-                    cv.line(frame, (right_thumb_x, right_thumb_y), (right_idx_x, right_idx_y), (255, 0, 0), 2)
                     
                     # Normalize the distance to be between 0 and 1
                     normalized_distance = min(max(distance / 200, 0), 1)
